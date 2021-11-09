@@ -1,10 +1,15 @@
+
 const colorsArray = ["blue", "green", "red", "yellow"]
 
-
-let button = document.body.querySelector(".button");
+const butn = document.querySelector("#btn")
  
- function changeColor() {
+ butn.addEventListener("click", function()  {
+
     const targetNumber = Math.floor(Math.random() * colorsArray.length) 
-    const targetColor = targetNumber[colorsArray];
-    return document.body.style.backgroundColor = "targetColor";
-}
+    const targetColor = colorsArray[targetNumber];
+
+    
+   
+    document.body.style.backgroundColor = targetColor;
+    document.querySelector(".label").textContent = "This color is " + targetColor
+})
